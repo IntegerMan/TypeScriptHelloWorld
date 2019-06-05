@@ -1,7 +1,9 @@
 class MyClass {
 
-    getMessage(): string {
-        return "Hello TypeScript";
+    getMessage():
+        string {
+        var out = "Hello TypeScript";
+        return out;
     }
 
 }
