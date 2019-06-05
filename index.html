@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Sample Title</title>
+    <script src="MyClass.js" type="application/javascript"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+            crossorigin="anonymous"></script>
 </head>
-<body>
-$END$
-</body>
+    <body>
+        <div id="content">
+            Loading...
+        </div>
+        <script type="application/javascript">
+            $(function() {
+                let foo = new MyClass();
+                $('#content').html(foo.getMessage());
+            });
+        </script>
+    </body>
 </html>
