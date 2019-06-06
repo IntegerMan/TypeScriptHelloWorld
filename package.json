@@ -7,6 +7,7 @@
     "compile": "tsc",
     "lint": "eslint --fix --ext .ts .",
     "build": "npm run lint && npm run compile",
+    "sonar": "scan",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matt Eland",
@@ -19,6 +20,7 @@
     "eslint-config-typescript": "^2.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "prettier": "1.17.1",
+    "sonarqube-scanner": "^2.4.1",
     "typescript": "3.3.3"
   }
 }

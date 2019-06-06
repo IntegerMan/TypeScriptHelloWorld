@@ -1,0 +1,1 @@
+sonar-scanner -D"sonar.projectKey=IntegerMan_TypeScriptHelloWorld" -D"sonar.organization=integerman-github" -D"sonar.sources=." -D"sonar.host.url=https://sonarcloud.io" -D"sonar.login=a1b18481fb060df0a9d6679b203656eeafe2e4f2"
