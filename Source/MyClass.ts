@@ -1,4 +1,6 @@
 ///<reference path="TimeProvider.ts"/>
+///<reference path="SampleContext.ts"/>
+///<reference path="TemplateManager.ts"/>
 
 class MyClass {
     /**
@@ -7,6 +9,12 @@ class MyClass {
     public getMessage(): string {
         const provider = new TimeProvider();
 
-        return `Hello TypeScript the time is currently: '${provider.getTime()}'. Better get coding.`;
+        const context = new SampleContext();
+        context.title = 'Hello Handlebared TypeScript';
+        context.message = `The time is currently: '${provider.getTime()}'. Better get coding.`;
+
+        const compiler = new TemplateManager();
+
+        return compiler.applyHandlebarsTemplateById('sample-template', context);
     }
 }

@@ -8,8 +8,17 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
             crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js" type="application/javascript"></script>
 </head>
     <body>
+        <script id="sample-template" type="text/x-handlebars-template">
+            <div class="entry">
+                <h1>{{title}}</h1>
+                <div class="body">
+                    {{message}}
+                </div>
+            </div>
+        </script>
         <div id="content">
             Loading...
         </div>
