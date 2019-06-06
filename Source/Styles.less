@@ -1,0 +1,20 @@
+//this can be either "dark" or "light"
+@theme: dark;
+
+@theme-primary: "@{theme}-primary"; //this will evaluate to "dark-primary"
+@theme-secondary: "@{theme}-secondary"; //this will evaluate to "dark-secondary"
+
+@dark-primary: #0F0;
+@dark-secondary: #333;
+
+@light-primary: #333;
+@light-secondary: #FFF;
+
+body {
+  //@theme-secondary evaluates to "dark-secondary"
+  //@dark-secondary evaluates to #000
+  background-color: @@theme-secondary;
+  //@theme-primary evaluates to "dark-primary"
+  //@dark-primary evaluates to #0F0
+  color: @@theme-primary;
+}

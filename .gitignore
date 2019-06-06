@@ -8,3 +8,5 @@ node_modules/
 output\.min\.js
 
 Source/*.js
+
+styles\.css

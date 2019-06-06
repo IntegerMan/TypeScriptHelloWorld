@@ -4,15 +4,23 @@
   "description": "A TypeScript application framework proof of concept",
   "main": "index.html",
   "scripts": {
-    "compile": "tsc",
+
     "lint": "eslint --fix --ext .ts ./source",
-    "build:ts": "npm run lint && npm run compile && npm run minify",
-    "build": "npm run build:ts",
-    "ci": "npm run build && npm run test && npm run sonar && npm run package",
-    "sonar": "scan",
+
+    "transpile:less": "lessc --ie-compat source/styles.less styles.css",
+    "transpile:ts": "tsc",
+    "transpile": "npm run transpile:less && npm run transpile:ts",
+
     "minify": "uglifyjs source/*.js -o output.min.js -c",
-    "package": "Echo TODO: Packaging not implemented",
+
+    "build": "npm run lint && npm run transpile && npm run minify",
+
+    "sonar": "scan",
     "test": "echo TODO: Galen Tests not implemented",
+    "package": "Echo TODO: Packaging not implemented",
+
+    "ci": "npm run build && npm run test && npm run sonar && npm run package",
+
     "watch:ts": "onchange \"source/*.ts\" -- npm run build:ts",
     "watch": "npm run watch:ts"
   },
@@ -25,6 +33,7 @@
     "eslint-config-prettier": "^4.3.0",
     "eslint-config-typescript": "^2.0.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "less": "^3.9.0",
     "onchange": "^6.0.0",
     "prettier": "1.17.1",
     "sonarqube-scanner": "^2.4.1",
