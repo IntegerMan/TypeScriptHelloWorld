@@ -1,13 +1,15 @@
 {
   "name": "typescriptpoc",
   "version": "1.0.0",
-  "description": "A TypeScript application proof of concept",
+  "description": "A TypeScript application framework proof of concept",
   "main": "index.html",
   "scripts": {
     "compile": "tsc",
     "lint": "eslint --fix --ext .ts .",
-    "build": "npm run lint && npm run compile",
+    "build": "npm run lint && npm run compile && npm run minify && npm run zip",
     "sonar": "scan",
+    "minify": "Echo Minify not implemented",
+    "zip": "Echo Zip not implemented",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matt Eland",
@@ -21,6 +23,7 @@
     "eslint-plugin-prettier": "^3.1.0",
     "prettier": "1.17.1",
     "sonarqube-scanner": "^2.4.1",
-    "typescript": "3.3.3"
+    "typescript": "3.3.3",
+    "uglify-js": "^3.6.0"
   }
 }
