@@ -6,12 +6,15 @@
   "scripts": {
     "compile": "tsc",
     "lint": "eslint --fix --ext .ts ./source",
-    "build": "npm run lint && npm run compile && npm run minify",
+    "build:ts": "npm run lint && npm run compile && npm run minify",
+    "build": "npm run build:ts",
     "ci": "npm run build && npm run test && npm run sonar && npm run package",
     "sonar": "scan",
     "minify": "uglifyjs source/*.js -o output.min.js -c",
     "package": "Echo TODO: Packaging not implemented",
-    "test": "echo TODO: Galen Tests not implemented"
+    "test": "echo TODO: Galen Tests not implemented",
+    "watch:ts": "onchange \"source/*.ts\" -- npm run build:ts",
+    "watch": "npm run watch:ts"
   },
   "author": "Matt Eland",
   "license": "ISC",
@@ -22,6 +25,7 @@
     "eslint-config-prettier": "^4.3.0",
     "eslint-config-typescript": "^2.0.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "onchange": "^6.0.0",
     "prettier": "1.17.1",
     "sonarqube-scanner": "^2.4.1",
     "typescript": "3.3.3",

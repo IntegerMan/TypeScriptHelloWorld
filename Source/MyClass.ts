@@ -7,6 +7,6 @@ class MyClass {
     public getMessage(): string {
         const provider = new TimeProvider();
 
-        return `Hello TypeScript the time is currently ${provider.getTime()}`;
+        return `Hello TypeScript the time is currently: '${provider.getTime()}'. Better get coding.`;
     }
 }

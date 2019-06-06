@@ -6,6 +6,6 @@ class TimeProvider {
     }
 
     public getTime(): string {
-        return 'Time for some TypeScript (AKA: ' + this._time.toTimeString() + ')';
+        return `Time for some TypeScript (AKA: ${this._time.toTimeString()})`;
     }
 }
