@@ -5,10 +5,10 @@
   "main": "index.html",
   "scripts": {
     "compile": "tsc",
-    "lint": "eslint --fix --ext .ts .",
+    "lint": "eslint --fix --ext .ts ./source",
     "build": "npm run lint && npm run compile && npm run minify && npm run zip",
     "sonar": "scan",
-    "minify": "Echo Minify not implemented",
+    "minify": "uglifyjs source/*.js -o output.min.js -c",
     "zip": "Echo Zip not implemented",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
