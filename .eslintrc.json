@@ -12,6 +12,7 @@
         "tsconfigRootDir": "."
     },
     "rules": {
-        "no-var": "error"
+        "no-var": "warn",
+        "prefer-const": "warn",
     }
 }
