@@ -10,3 +10,5 @@ output\.min\.js
 Source/*.js
 
 styles\.css
+
+output\.min\.css
