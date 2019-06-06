@@ -6,11 +6,12 @@
   "scripts": {
     "compile": "tsc",
     "lint": "eslint --fix --ext .ts ./source",
-    "build": "npm run lint && npm run compile && npm run minify && npm run zip",
+    "build": "npm run lint && npm run compile && npm run minify",
+    "ci": "npm run build && npm run test && npm run sonar && npm run package",
     "sonar": "scan",
     "minify": "uglifyjs source/*.js -o output.min.js -c",
-    "zip": "Echo Zip not implemented",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "package": "Echo TODO: Packaging not implemented",
+    "test": "echo TODO: Galen Tests not implemented"
   },
   "author": "Matt Eland",
   "license": "ISC",

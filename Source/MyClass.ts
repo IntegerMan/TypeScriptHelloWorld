@@ -1,3 +1,5 @@
+///<reference path="TimeProvider.ts"/>
+
 class MyClass {
     /**
      * So much stuff to write and document!!!
